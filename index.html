@@ -108,6 +108,85 @@ footer .rye{color:var(--laton);font-size:1.8rem;display:block;margin-bottom:6px}
 .info h3{font-size:1.1rem;line-height:1.25}.info small{color:var(--muted);display:block}
 .more{text-align:center;margin-top:28px}.more[hidden]{display:none}
 .row b{min-width:60px}
+
+header{flex-wrap:wrap}
+nav{gap:6px}nav a.l{margin-right:10px}
+.ico{position:relative;background:none;border:0;color:var(--hueso);width:44px;height:44px;display:grid;place-items:center;border-radius:50%;cursor:pointer;transition:background .2s}
+.ico:hover,.ico[aria-expanded=true]{background:var(--caoba2)}
+.ico svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.dot{position:absolute;top:1px;right:-1px;min-width:19px;height:19px;border-radius:10px;background:var(--laton);color:var(--cuero);font:700 .72rem 'Barlow',sans-serif;display:grid;place-items:center;padding:0 5px}
+.dot[data-z]{display:none}.dot.bump{animation:bump .4s}
+nav .wa{margin-left:6px;padding:9px 18px}
+.panel{position:absolute;left:0;right:0;top:100%;background:var(--caoba);border-bottom:2px solid var(--laton);box-shadow:0 24px 40px rgba(0,0,0,.55);max-height:calc(100vh - 84px);overflow:auto;animation:drop .28s ease-out}
+.panel[hidden],.scrim[hidden]{display:none}
+@keyframes drop{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.pin{max-width:860px;margin:0 auto;padding:18px 5vw 24px}
+.pbar{display:flex;gap:8px;align-items:center;margin-bottom:8px}.pbar .search{flex:1;max-width:none}
+.search{background:var(--cuero);border:1.5px solid var(--caoba2);border-radius:6px;color:var(--hueso);font:500 1rem 'Barlow',sans-serif;padding:12px 14px}
+.search:focus{outline:none;border-color:var(--laton)}
+.ac{border-bottom:1px solid var(--caoba2)}
+.ach{width:100%;display:flex;align-items:center;gap:10px;background:none;border:0;color:var(--hueso);font:600 1.2rem 'Barlow',sans-serif;padding:16px 2px;cursor:pointer;text-align:left}
+.ach .cnt{color:var(--muted);font-weight:500;font-size:.95rem}
+.ach svg{width:20px;height:20px;margin-left:auto;stroke:var(--laton);fill:none;stroke-width:2;transition:transform .25s}
+.ach[aria-expanded=true] svg{transform:rotate(180deg)}
+.acb{padding:0 2px 18px;animation:drop .25s ease-out}
+.grp{margin-bottom:12px}.grp b{display:block;color:var(--muted);font-weight:500;font-size:.9rem;margin-bottom:7px}
+.grp .chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{border:1.5px solid var(--caoba2);background:transparent;color:var(--hueso);font:500 .92rem 'Barlow',sans-serif;padding:7px 14px;border-radius:999px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.chip:hover{border-color:var(--laton)}.chip[aria-pressed=true]{background:var(--laton);border-color:var(--laton);color:var(--cuero)}
+.pfoot{display:flex;align-items:center;gap:18px;margin-top:18px}
+.lnk{background:none;border:0;color:var(--muted);font:500 .98rem 'Barlow',sans-serif;cursor:pointer;text-decoration:underline;padding:6px 0;display:inline-flex;align-items:center;gap:6px}
+.lnk:hover{color:var(--hueso)}.lnk.strong{color:var(--laton);text-decoration:none;font-weight:600}.lnk svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+.scrim{position:fixed;inset:0;background:rgba(10,6,4,.62);z-index:15}
+.status{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin:4px 0 22px;color:var(--hueso);font-size:1.15rem;font-weight:500}
+.status #stxt{margin-right:auto}
+.heart{position:absolute;top:8px;right:8px;z-index:3;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.92);display:grid;place-items:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);transition:transform .2s}
+.heart:hover{transform:scale(1.1)}
+.heart svg{width:22px;height:22px;stroke:#7a4a2a;fill:none;stroke-width:2;stroke-linejoin:round;transition:fill .2s,stroke .2s}
+.heart.on svg{fill:#c4302b;stroke:#c4302b}.heart.on{animation:bump .4s}
+.stage img{pointer-events:none}
+.faq{max-width:820px}
+.faq details{border-bottom:1px solid var(--caoba2)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 2px;font:600 1.12rem 'Barlow',sans-serif}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:12px;height:12px;border-right:2px solid var(--laton);border-bottom:2px solid var(--laton);transform:rotate(45deg);transition:transform .25s}
+.faq details[open] summary i{transform:rotate(-135deg)}
+.faq details p{margin:0;padding:0 2px 20px;color:var(--muted);animation:drop .25s ease-out;max-width:68ch}
+#drawer{padding-top:calc(16px + env(safe-area-inset-top,0px))}
+.x{background:none;border:0;color:var(--hueso);cursor:pointer;align-self:flex-end;width:40px;height:40px;display:grid;place-items:center;border-radius:50%}.x:hover{background:var(--caoba2)}
+.x svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.dtabs{display:flex;gap:6px;margin:4px 0 10px;border-bottom:1px solid var(--caoba2)}
+.dt{background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);font:600 1.1rem 'Barlow',sans-serif;padding:10px 14px;cursor:pointer}
+.dt[aria-selected=true]{color:var(--hueso);border-bottom-color:var(--laton)}
+#list li{gap:12px;align-items:center}
+#list .th{flex:none;width:62px;height:62px;border-radius:6px;background:#fff;object-fit:contain}
+#list .mid{flex:1;min-width:0;font-weight:500;font-size:.98rem;line-height:1.3}
+#list .mid small{color:var(--muted);display:block;font-weight:400}
+#list .mid select{margin-top:6px;background:var(--cuero);color:var(--hueso);border:1.5px solid var(--caoba2);border-radius:6px;padding:4px 6px;font:500 .9rem 'Barlow',sans-serif}
+#list .rm{background:none;border:0;color:var(--muted);cursor:pointer;font-size:1.3rem;padding:4px 8px}
+#list .tofav{background:var(--laton);color:var(--cuero);border:0;border-radius:6px;font:600 .88rem 'Barlow',sans-serif;padding:8px 10px;cursor:pointer}
+#dfoot{padding-top:12px;display:flex;flex-direction:column;gap:10px}
+#dfoot .tot{display:flex;justify-content:space-between;font-weight:600}
+#dfoot .empty{color:var(--muted);text-align:center;padding:30px 0;margin:0}
+@media(max-width:760px){nav .wa{display:none}nav a.l{display:none}.brand{font-size:1.25rem}}
+
+.hero{min-height:calc(100vh - 70px);padding-top:5vh;padding-bottom:7vh}
+.eyebrow{display:inline-block;color:var(--laton);font:600 .85rem 'Barlow',sans-serif;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px}
+.hero h1{max-width:12ch}
+.facts{list-style:none;display:flex;flex-wrap:wrap;gap:12px 34px;padding:0;margin:34px 0 0}
+.facts li{border-left:3px solid var(--laton);padding-left:12px}
+.facts b{display:block;font:700 1.15rem 'Barlow',sans-serif;color:var(--hueso)}.facts span{color:var(--muted);font-size:.92rem}
+.hstage{position:relative;justify-self:center;width:100%;max-width:520px;aspect-ratio:4/5;max-height:78vh;border-radius:14px;overflow:hidden;background:#150d09;box-shadow:0 34px 70px rgba(0,0,0,.6)}
+.hstage::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(20,12,8,.25),transparent 30%,transparent 62%,rgba(20,12,8,.7))}
+.hstage::after{content:"";position:absolute;inset:11px;z-index:3;pointer-events:none;border:2px dashed rgba(209,166,74,.75);border-radius:9px}
+.hs{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease;animation:kb 16s ease-in-out infinite alternate}
+.hs.on{opacity:1}
+@keyframes kb{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.15) translate(-2.5%,-2%)}}
+.hdots{position:absolute;left:0;right:0;bottom:24px;z-index:4;display:flex;justify-content:center;gap:8px}
+.hdots button{width:24px;height:4px;border:0;border-radius:2px;background:rgba(239,228,207,.5);cursor:pointer;padding:0;transition:background .3s,width .3s}
+.hdots button.on{background:var(--laton);width:42px}
+@media(max-width:760px){.hero{min-height:0}.hstage{order:-1;max-width:none;max-height:62vh}.hero h1{max-width:none}}
+@media(prefers-reduced-motion:reduce){.hs{animation:none}}
 </style>
 </head>
 <body>
@@ -115,42 +194,57 @@ footer .rye{color:var(--laton);font-size:1.8rem;display:block;margin-bottom:6px}
 <header>
   <a class="brand rye" href="#inicio" aria-label="Yeyo Boots, inicio"><svg viewBox="0 0 400 340" aria-hidden="true"><use href="#logo"/></svg>Yeyo Boots</a>
   <nav>
-    <a class="l" href="#catalogo">Catálogo</a>
-    <a class="l" href="#pedir">Cómo pedir</a>
-    <a class="btn" href="https://wa.me/524779189715?text=Hola%20Yeyo%20Boots%2C%20quiero%20informaci%C3%B3n%20de%20sus%20botas" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="l" href="#catalogo">Catálogo</a><a class="l" href="#preguntas">Preguntas</a><a class="l" href="#pedir">Cómo pedir</a>
+    <button class="ico" id="bSearch" aria-label="Buscar y filtrar" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+    <button class="ico" id="bFav" aria-label="Mis favoritos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.600 3.800 4.500 7 4.500c2 0 3.600 1.100 5 3 1.400-1.900 3-3 5-3 3.200 0 5.400 3.100 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400z"/></svg><span class="dot" id="nf" data-z="1">0</span></button>
+    <button class="ico" id="bCart" aria-label="Mi pedido"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.200 12H6.200z"/><path d="M9 8V6.500a3 3 0 016 0V8"/></svg><span class="dot" id="n" data-z="1">0</span></button>
+    <a class="btn wa" href="https://wa.me/524779189715?text=Hola%20Yeyo%20Boots%2C%20quiero%20informaci%C3%B3n%20de%20sus%20productos" target="_blank" rel="noopener">WhatsApp</a>
   </nav>
+  <div id="panel" class="panel" hidden role="dialog" aria-label="Buscar y filtrar">
+    <div class="pin">
+      <div class="pbar"><input id="q" class="search" type="search" placeholder="Buscar modelo, piel o color…" aria-label="Buscar"><button class="ico" id="pClose" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+      <div id="acc"></div>
+      <div class="pfoot"><button class="btn" id="pGo">Ver modelos</button><button class="lnk" id="pClear">Quitar filtros</button></div>
+    </div>
+  </div>
 </header>
+<div id="scrim" class="scrim" hidden></div>
 
 <main id="inicio">
 <div class="hero">
-  <div>
-    <h1 class="rye rise" style="animation-delay:.1s">Botas vaqueras exóticas</h1>
+  <div class="htext">
+    <span class="eyebrow rise" style="animation-delay:.05s">Hechas a mano en León, Gto.</span>
+    <h1 class="rye rise" style="animation-delay:.15s">Botas vaqueras exóticas</h1>
     <p class="rise" style="animation-delay:.35s">Avestruz, pescado, pitón, cocodrilo y más. Botas para hombre y mujer, y chamarras de piel. Elige tu modelo y haz tu pedido directo por WhatsApp.</p>
-    <div class="cta rise" style="animation-delay:.6s">
+    <div class="cta rise" style="animation-delay:.55s">
       <a class="btn" href="#catalogo">Ver catálogo</a>
-      <a class="btn o" href="https://wa.me/524779189715?text=Hola%20Yeyo%20Boots%2C%20quiero%20informaci%C3%B3n%20de%20sus%20botas" target="_blank" rel="noopener">Escríbenos</a>
+      <a class="btn o" href="https://wa.me/524779189715?text=Hola%20Yeyo%20Boots%2C%20quiero%20informaci%C3%B3n%20de%20sus%20productos" target="_blank" rel="noopener">Escríbenos</a>
     </div>
+    <ul class="facts rise" style="animation-delay:.75s"><li><b id="fN">+400</b><span>modelos</span></li><li><b>Hombre y mujer</b><span>más chamarras</span></li><li><b>100% piel</b><span>genuina</span></li></ul>
   </div>
-  <svg class="patch" viewBox="0 0 420 300" role="img" aria-label="Logotipo Yeyo Boots">
-    <defs><mask id="m"><rect class="draw" pathLength="1" x="26" y="26" width="368" height="248" rx="18" fill="none" stroke="#fff" stroke-width="12"/></mask></defs>
-    <rect x="10" y="10" width="400" height="280" rx="28" fill="#35211a" stroke="#d1a64a" stroke-width="4"/>
-    <rect x="26" y="26" width="368" height="248" rx="18" fill="none" stroke="#d1a64a" stroke-width="3" stroke-dasharray="9 7" mask="url(#m)"/>
-    <g class="fade">
-      <use href="#logo" transform="translate(18 68) scale(.48)"/>
-      <text x="296" y="150" text-anchor="middle" font-family="Rye,Georgia,serif" font-size="56" fill="#efe4cf">YEYO</text>
-      <text x="296" y="204" text-anchor="middle" font-family="Rye,Georgia,serif" font-size="40" letter-spacing="4" fill="#d1a64a">BOOTS</text>
-    </g>
-  </svg>
+  <div class="hstage rise" style="animation-delay:.25s" aria-label="Fotos de botas Yeyo Boots"><img class="hs on" src="fotos/hero/hero-1.webp" alt="Bota vaquera de avestruz color tabaco" fetchpriority="high"><img class="hs" src="fotos/hero/hero-2.webp" alt="Botas vaqueras sobre la caja de una camioneta" loading="lazy"><img class="hs" src="fotos/hero/hero-3.webp" alt="Vaquero con piel exótica roja" loading="lazy"><img class="hs" src="fotos/hero/hero-4.webp" alt="Botas de mujer con bordado" loading="lazy"><img class="hs" src="fotos/hero/hero-5.webp" alt="Suela de cuero de una bota vaquera" loading="lazy"><div class="hdots"><button class="on" aria-label="Foto 1"></button><button aria-label="Foto 2"></button><button aria-label="Foto 3"></button><button aria-label="Foto 4"></button><button aria-label="Foto 5"></button></div></div>
 </div>
 
 <section id="catalogo">
   <h2 class="rye">Catálogo</h2>
-  <p class="sub">Elige la sección, filtra por piel y estilo, y agrega tus modelos al pedido. Lo mandas completo por WhatsApp para confirmar precio y disponibilidad.</p>
-  <div class="tabs" id="tabs" role="tablist"></div>
-  <div class="tools"><input id="q" class="search" type="search" placeholder="Buscar modelo, piel o color…" aria-label="Buscar"><span id="count" class="count"></span></div>
-  <div class="filters" id="filters"></div>
+  <div class="status"><span id="stxt"></span><button class="lnk" id="sClear" hidden>Quitar filtros</button><button class="lnk strong" id="sOpen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg> Buscar o filtrar</button></div>
   <div class="grid" id="grid" aria-live="polite"></div>
   <div class="more"><button class="btn o" id="more">Ver más modelos</button></div>
+</section>
+<section id="preguntas">
+  <h2 class="rye">Preguntas frecuentes</h2>
+  <p class="sub">Lo que más nos preguntan. Si no encuentras tu duda, escríbenos por WhatsApp.</p>
+  <div class="faq">
+    <details><summary>¿Cómo hago mi pedido?<i></i></summary><p>Elige tus modelos en el catálogo, selecciona la talla y presiona “Agregar”. Abre tu pedido (ícono de la bolsa), revísalo y envíalo por WhatsApp. Ahí confirmamos disponibilidad, precio y entrega contigo.</p></details>
+    <details><summary>¿Cuánto cuestan?<i></i></summary><p>Los precios se cotizan por WhatsApp según el modelo y la piel. Agrega tus favoritos al pedido y te respondemos con el precio de cada uno.</p></details>
+    <details><summary>¿Qué tallas manejan?<i></i></summary><p>Cada modelo muestra sus tallas en el selector. En general, las botas de hombre van de 25 a 32 MX (6 a 13 USA) y las de mujer de 22 a 28.5 MX (5 a 11.5 USA, 34 a 44 EUR). Las chamarras van de M a 3XL en hombre y dama, y de la 8 a la 16 en Jr.</p></details>
+    <details><summary>¿La piel es genuina? ¿Dónde se fabrican?<i></i></summary><p>Fabricamos cada par artesanalmente en la ciudad de León, Gto. Trabajamos con piel original y con la máxima calidad.</p></details>
+    <details><summary>¿Qué pieles exóticas manejan?<i></i></summary><p>Avestruz, pescado, pitón, cocodrilo, lizard, alligator y manta. También tenemos crazy, búfalo, cuello de toro, nobuck y atanado. Con la lupa puedes filtrar solo las exóticas.</p></details>
+    <details><summary>¿Qué tipos de suela hay?<i></i></summary><p>Hule, poliuretano, truck, doble densidad, cuero, media vida y welt. Cada modelo indica la suya.</p></details>
+    <details><summary>¿Cómo uso la lupa y los favoritos?<i></i></summary><p>Con la lupa eliges botas de hombre, botas de mujer o chamarras, y filtras por piel, estilo o tipo. Con el corazón guardas los modelos que te gustan para agregarlos después a tu pedido. Tus favoritos y tu pedido se guardan en tu navegador.</p></details>
+    <details><summary>¿Hacen envíos? ¿Qué formas de pago aceptan?<i></i></summary><p>Escríbenos por WhatsApp y te confirmamos envíos, formas de pago y tiempos de entrega.</p></details>
+  </div>
+  <div class="more"><a class="btn" href="https://wa.me/524779189715?text=Hola%20Yeyo%20Boots%2C%20tengo%20una%20duda" target="_blank" rel="noopener">Preguntar por WhatsApp</a></div>
 </section>
 
 <section id="pedir">
@@ -169,56 +263,93 @@ footer .rye{color:var(--laton);font-size:1.8rem;display:block;margin-bottom:6px}
   Pedidos por WhatsApp: <a href="https://wa.me/524779189715" target="_blank" rel="noopener">477 918 9715</a>
 </footer>
 
-<button class="btn" id="fab" aria-label="Abrir mi pedido">Mi pedido (<span id="n">0</span>)</button>
-<aside id="drawer" aria-label="Mi pedido" aria-hidden="true">
-  <button class="x" id="close">Cerrar</button>
-  <h2 class="rye">Mi pedido</h2>
+<aside id="drawer" aria-hidden="true" aria-label="Mi pedido y favoritos">
+  <button class="x" id="close" aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="dtabs"><button class="dt" id="t1" aria-selected="true">Mi pedido</button><button class="dt" id="t2" aria-selected="false">Favoritos</button></div>
   <ul id="list"></ul>
-  <a class="btn" id="send" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+  <div id="dfoot"></div>
 </aside>
 
 <script src="productos.js"></script>
 <script>
 const WA="524779189715",PRICE="Cotiza por WhatsApp",$=s=>document.querySelector(s);
 const norm=s=>(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+const ld=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}},sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
 const piel=p=>p.exotica?["Exóticas",p.piel]:[p.piel];
-const TABS={hombre:{t:"Botas hombre",f:[{l:"Piel",g:piel},{l:"Estilo",g:p=>[p.estilo]},{l:"Tipo",g:p=>[p.tipo]}]},
- mujer:{t:"Botas mujer",f:[{l:"Piel",g:piel},{l:"Línea",g:p=>[p.estilo]}]},
- chamarras:{t:"Chamarras",f:[{l:"Para",g:p=>[p.para]},{l:"Tipo",g:p=>[p.tipo]}]}};
-let tab="hombre",sel=[],q="",shown=48,cart={};
-const list=()=>PRODUCTOS.filter(p=>p.seccion===tab);
-function tabs(){$("#tabs").innerHTML=Object.entries(TABS).map(([k,v])=>`<button class="tab" role="tab" aria-selected="${k===tab}" onclick="setTab('${k}')">${v.t} (${PRODUCTOS.filter(p=>p.seccion===k).length})</button>`).join("")}
-function setTab(k){tab=k;sel=TABS[k].f.map(()=> "Todas");q="";$("#q").value="";shown=48;tabs();filters();render()}
-function filters(){
-  const L=list();$("#filters").innerHTML=TABS[tab].f.map((f,i)=>{const c={};L.forEach(p=>f.g(p).forEach(v=>c[v]=(c[v]||0)+1));
-    const ks=Object.keys(c).sort((a,b)=>a==="Exóticas"?-1:b==="Exóticas"?1:c[b]-c[a]);
-    return `<div class="row"><b>${f.l}</b>`+["Todas",...ks].map(k=>`<button class="chip" aria-pressed="${sel[i]===k}" onclick="pick(${i},this.dataset.v)" data-v="${k}">${k}${k==="Todas"?"":" ("+c[k]+")"}</button>`).join("")+`</div>`}).join("")}
-function pick(i,v){sel[i]=v;shown=48;filters();render()}
+const SEC={hombre:{t:"Botas de hombre",g:[{l:"Piel",g:piel},{l:"Estilo",g:p=>[p.estilo]},{l:"Tipo",g:p=>[p.tipo]}]},
+ mujer:{t:"Botas de mujer",g:[{l:"Piel",g:piel},{l:"Línea",g:p=>[p.estilo]}]},
+ chamarras:{t:"Chamarras",g:[{l:"Para",g:p=>[p.para]},{l:"Tipo",g:p=>[p.tipo]}]}};
+const CHEV=`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>`,HEART=`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.600 3.800 4.500 7 4.500c2 0 3.600 1.100 5 3 1.400-1.900 3-3 5-3 3.200 0 5.400 3.100 4.200 6.600-1.700 4.800-9.200 9.400-9.200 9.400z"/></svg>`;
+let sec="hombre",F={},q="",shown=48,openAcc=null,dtab="cart",cart=ld("yb_cart",{}),fav=ld("yb_fav",[]);
+const P=id=>PRODUCTOS.find(x=>x.id==id);
+cart=Object.fromEntries(Object.entries(cart).filter(([k])=>P(k.split("|")[0])));fav=fav.filter(P);
+function matches(){
+  if(q){const k=norm(q);return PRODUCTOS.filter(p=>norm([p.nombre,p.piel,p.color,p.estilo,p.para,p.tipo].join(" ")).includes(k))}
+  return PRODUCTOS.filter(p=>p.seccion===sec&&SEC[sec].g.every(f=>!F[f.l]||f.g(p).includes(F[f.l])))}
+function render(){
+  const L=matches(),fl=Object.values(F);
+  $("#stxt").textContent=q?`Resultados para “${q}” (${L.length})`:`${SEC[sec].t}${fl.map(v=>" · "+v).join("")} (${L.length})`;
+  $("#sClear").hidden=!(q||fl.length);
+  $("#grid").innerHTML=L.length?L.slice(0,shown).map((p,i)=>{const alt=p.detalle||p.foto2,on=fav.includes(p.id);
+   return `<article class="card" style="--i:${i%12}"><div class="stage${alt?" has":""}">${p.exotica?'<span class="badge">Exótica</span>':""}<button class="heart${on?" on":""}" aria-pressed="${on}" aria-label="Guardar ${p.nombre} en favoritos" onclick="tfav(${p.id},this)">${HEART}</button><img loading="lazy" decoding="async" src="${p.foto}" alt="${p.nombre}">${alt?`<img class="alt" loading="lazy" decoding="async" src="${alt}" alt="">`:""}</div>
+   <div class="info"><h3>${p.nombre}</h3>${sub(p)}<span class="price">${p.precio||PRICE}</span>
+   <div class="buy"><select id="s${p.id}" aria-label="Talla de ${p.nombre}">${p.tallas.map(s=>`<option>${s}</option>`).join("")}</select><button class="btn" onclick="add(${p.id},this)">Agregar</button></div></div></article>`}).join(""):'<p class="empty">No hay modelos con esos filtros. Prueba con otra opción.</p>';
+  $("#more").hidden=L.length<=shown;$("#pGo").textContent=`Ver ${L.length} modelos`}
 function sub(p){
   if(p.seccion==="hombre")return `<small>${p.estilo} · ${p.piel}${p.color?" · "+p.color:""}</small><small>Suela ${p.suela.toLowerCase()}</small>`;
   if(p.seccion==="mujer")return `<small>${p.estilo} · ${p.piel}${p.color?" · "+p.color:""}</small>${p.notas?`<small>${p.notas}</small>`:""}`;
   return `<small>Para ${p.para.toLowerCase()} · ${p.color}</small>`}
-function render(){
-  const F=TABS[tab].f,k=norm(q);
-  const L=list().filter(p=>F.every((f,i)=>sel[i]==="Todas"||f.g(p).includes(sel[i]))&&(!k||norm([p.nombre,p.piel,p.color,p.estilo,p.para].join(" ")).includes(k)));
-  $("#count").textContent=L.length+" modelos";
-  $("#grid").innerHTML=L.length?L.slice(0,shown).map((p,i)=>{const alt=p.detalle||p.foto2;
-   return `<article class="card" style="--i:${i%12}"><div class="stage${alt?" has":""}">${p.exotica?'<span class="badge">Exótica</span>':""}<img loading="lazy" decoding="async" src="${p.foto}" alt="${p.nombre}">${alt?`<img class="alt" loading="lazy" decoding="async" src="${alt}" alt="">`:""}</div>
-   <div class="info"><h3>${p.nombre}</h3>${sub(p)}<span class="price">${p.precio||PRICE}</span>
-   <div class="buy"><select id="s${p.id}" aria-label="Talla de ${p.nombre}">${p.tallas.map(s=>`<option>${s}</option>`).join("")}</select><button class="btn" onclick="add(${p.id},this)">Agregar</button></div></div></article>`}).join(""):'<p class="empty">No hay modelos con esos filtros. Prueba con otra opción.</p>';
-  $("#more").hidden=L.length<=shown}
-$("#more").onclick=()=>{shown+=48;render()};$("#q").oninput=e=>{q=e.target.value;shown=48;render()};
-function add(id,b){const s=$("#s"+id).value,k=id+"|"+s;cart[k]=(cart[k]||0)+1;upd();b.textContent="Agregada";setTimeout(()=>b.textContent="Agregar",1100);const f=$("#fab");f.classList.remove("bump");void f.offsetWidth;f.classList.add("bump")}
-function chg(k,d){cart[k]+=d;if(cart[k]<=0)delete cart[k];upd()}
-const P=id=>PRODUCTOS.find(x=>x.id==id);
-function upd(){const ks=Object.keys(cart);$("#n").textContent=ks.reduce((a,k)=>a+cart[k],0);
-  $("#list").innerHTML=ks.length?ks.map(k=>{const[id,s]=k.split("|"),p=P(id);return `<li><div>${p.nombre}<small>Talla ${s}</small></div><div class="q"><button aria-label="Quitar uno" onclick="chg('${k}',-1)">-</button>${cart[k]}<button aria-label="Agregar uno" onclick="chg('${k}',1)">+</button></div></li>`}).join(""):'<li><small>Aún no agregas nada. Elige un modelo del catálogo.</small></li>';
-  const lines=ks.map(k=>{const[id,s]=k.split("|"),p=P(id);return `- ${p.nombre}, talla ${s}, cantidad ${cart[k]}`});
-  const msg=ks.length?"Hola Yeyo Boots, quiero hacer este pedido:\n"+lines.join("\n")+"\n¿Me confirman precio y disponibilidad?":"Hola Yeyo Boots, quiero información de sus productos";
-  $("#send").href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg)}
-const dr=$("#drawer");function tog(o){dr.classList.toggle("open",o);dr.setAttribute("aria-hidden",!o)}
-$("#fab").onclick=()=>tog(true);$("#close").onclick=()=>tog(false);document.addEventListener("keydown",e=>{if(e.key==="Escape")tog(false)});
-setTab("hombre");upd();
+/* panel de lupa */
+function acc(){$("#acc").innerHTML=Object.entries(SEC).map(([k,v])=>{const L=PRODUCTOS.filter(p=>p.seccion===k),open=openAcc===k;
+  const body=open?`<div class="acb"><div class="grp"><div class="chips"><button class="chip" aria-pressed="${sec===k&&!q&&!Object.keys(F).length}" onclick="pickf('${k}')">Ver todo</button></div></div>`+v.g.map(f=>{const c={};L.forEach(p=>f.g(p).forEach(x=>c[x]=(c[x]||0)+1));
+   const ks=Object.keys(c).sort((a,b)=>a==="Exóticas"?-1:b==="Exóticas"?1:c[b]-c[a]);
+   return `<div class="grp"><b>${f.l}</b><div class="chips">`+ks.map(x=>`<button class="chip" aria-pressed="${sec===k&&F[f.l]===x}" data-l="${f.l}" data-v="${x}" onclick="pickf('${k}',this.dataset.l,this.dataset.v)">${x} (${c[x]})</button>`).join("")+`</div></div>`}).join("")+`</div>`:"";
+  return `<div class="ac"><button class="ach" aria-expanded="${open}" onclick="oacc('${k}')">${v.t}<span class="cnt">${L.length}</span>${CHEV}</button>${body}</div>`}).join("")}
+function oacc(k){openAcc=openAcc===k?null:k;acc()}
+function pickf(k,l,v){if(sec!==k||q){sec=k;F={}}q="";$("#q").value="";if(!l)F={};else if(F[l]===v)delete F[l];else F[l]=v;shown=48;acc();render()}
+function openP(){$("#panel").hidden=false;$("#scrim").hidden=false;$("#bSearch").setAttribute("aria-expanded","true");if(!openAcc)openAcc=sec;acc();setTimeout(()=>$("#q").focus(),50)}
+function closeP(){$("#panel").hidden=true;$("#bSearch").setAttribute("aria-expanded","false");if(dr.getAttribute("aria-hidden")==="true")$("#scrim").hidden=true}
+function goCat(){closeP();$("#catalogo").scrollIntoView({behavior:"smooth"})}
+function clearAll(){F={};q="";$("#q").value="";shown=48;acc();render()}
+$("#bSearch").onclick=()=>$("#panel").hidden?openP():closeP();$("#sOpen").onclick=openP;$("#pClose").onclick=closeP;$("#pGo").onclick=goCat;
+$("#pClear").onclick=clearAll;$("#sClear").onclick=clearAll;$("#more").onclick=()=>{shown+=48;render()};
+$("#q").oninput=e=>{q=e.target.value.trim();shown=48;acc();render()};
+$("#q").onkeydown=e=>{if(e.key==="Enter")goCat()};
+/* favoritos y pedido */
+function bump(el){el.classList.remove("bump");void el.offsetWidth;el.classList.add("bump")}
+function save(){sv("yb_cart",cart);sv("yb_fav",fav);const n=Object.values(cart).reduce((a,b)=>a+b,0);
+  $("#n").textContent=n;$("#n").toggleAttribute("data-z",!n);$("#nf").textContent=fav.length;$("#nf").toggleAttribute("data-z",!fav.length)}
+function tfav(id,b){const i=fav.indexOf(id);if(i>=0)fav.splice(i,1);else fav.push(id);b.classList.toggle("on",i<0);b.setAttribute("aria-pressed",i<0);save();bump($("#nf"));if(isOpen()&&dtab==="fav")drawerR()}
+function add(id,b){const s=$("#s"+id).value;put(id,s);b.textContent="Agregada";setTimeout(()=>b.textContent="Agregar",1100)}
+function put(id,s){const k=id+"|"+s;cart[k]=(cart[k]||0)+1;save();bump($("#n"));if(isOpen())drawerR()}
+function chg(k,d){cart[k]+=d;if(cart[k]<=0)delete cart[k];save();drawerR()}
+function unfav(id){fav=fav.filter(x=>x!==id);save();drawerR();render()}
+function favAdd(id){put(id,$("#fs"+id).value)}
+function msg(){const ks=Object.keys(cart);if(!ks.length)return"Hola Yeyo Boots, quiero información de sus productos";
+  return "Hola Yeyo Boots, quiero hacer este pedido:\n"+ks.map(k=>{const[id,s]=k.split("|");return `- ${P(id).nombre}, talla ${s}, cantidad ${cart[k]}`}).join("\n")+"\n¿Me confirman precio y disponibilidad?"}
+const dr=$("#drawer"),isOpen=()=>dr.getAttribute("aria-hidden")==="false";
+function drawerR(){
+  $("#t1").setAttribute("aria-selected",dtab==="cart");$("#t2").setAttribute("aria-selected",dtab==="fav");
+  if(dtab==="cart"){const ks=Object.keys(cart),n=ks.reduce((a,k)=>a+cart[k],0);
+    $("#list").innerHTML=ks.map(k=>{const[id,s]=k.split("|"),p=P(id);return `<li><img class="th" src="${p.foto}" alt=""><div class="mid">${p.nombre}<small>Talla ${s}</small></div><div class="q"><button aria-label="Quitar uno" onclick="chg('${k}',-1)">-</button>${cart[k]}<button aria-label="Agregar uno" onclick="chg('${k}',1)">+</button></div></li>`}).join("");
+    $("#dfoot").innerHTML=ks.length?`<div class="tot"><span>Total de piezas</span><span>${n}</span></div><a class="btn" href="https://wa.me/${WA}?text=${encodeURIComponent(msg())}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a><button class="lnk" onclick="cart={};save();drawerR()">Vaciar pedido</button>`:'<p class="empty">Tu pedido está vacío. Agrega botas o chamarras desde el catálogo.</p>'}
+  else{$("#list").innerHTML=fav.map(id=>{const p=P(id);return `<li><img class="th" src="${p.foto}" alt=""><div class="mid">${p.nombre}<select id="fs${id}" aria-label="Talla">${p.tallas.map(s=>`<option>${s}</option>`).join("")}</select></div><button class="tofav" onclick="favAdd(${id})">Al pedido</button><button class="rm" aria-label="Quitar de favoritos" onclick="unfav(${id})">×</button></li>`}).join("");
+    $("#dfoot").innerHTML=fav.length?"":'<p class="empty">Aún no tienes favoritos. Toca el corazón en los modelos que te gusten.</p>'}}
+function openD(tab){dtab=tab;closeP();dr.classList.add("open");dr.setAttribute("aria-hidden","false");$("#scrim").hidden=false;drawerR()}
+function closeD(){dr.classList.remove("open");dr.setAttribute("aria-hidden","true");if($("#panel").hidden)$("#scrim").hidden=true}
+$("#bCart").onclick=()=>openD("cart");$("#bFav").onclick=()=>openD("fav");$("#close").onclick=closeD;
+$("#t1").onclick=()=>{dtab="cart";drawerR()};$("#t2").onclick=()=>{dtab="fav";drawerR()};
+$("#scrim").onclick=()=>{closeP();closeD()};document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeP();closeD()}});
+save();render();
+</script>
+<script>
+(function(){const S=[...document.querySelectorAll(".hs")],D=[...document.querySelectorAll(".hdots button")];let i=0,t;
+function go(n){S[i].classList.remove("on");D[i].classList.remove("on");i=(n+S.length)%S.length;S[i].classList.add("on");D[i].classList.add("on")}
+function run(){clearInterval(t);if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches))t=setInterval(()=>go(i+1),5500)}
+D.forEach((b,k)=>b.onclick=()=>{go(k);run()});run();
+const st=document.querySelector(".hstage");st.onmouseenter=()=>clearInterval(t);st.onmouseleave=run;
+const fn=document.getElementById("fN");if(fn&&window.PRODUCTOS)fn.textContent="+"+Math.floor(PRODUCTOS.length/10)*10;
+})();
 </script>
 </body>
 </html>
